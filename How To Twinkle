@@ -1,0 +1,9 @@
+Thinking about how to create this flickering
+
+Make a randomiser that starts a random StarTwinkleFunction at a random interval (so a random delay must be made between functions)
+I am not really sure if this works with the delays that are built into the functions. The delay() function stops the entire arduino, but perhaps 
+the delays (10) are short enough to create a false sense of continuity. That or it fails misserably :)
+Anyhoo, the main point is that the stars need to "randomly" twinkle.
+
+A fake way is to use several arduinos to power the project and in that way I can easily create a sense of continuity. 
+I would prefer to do it in code though.
