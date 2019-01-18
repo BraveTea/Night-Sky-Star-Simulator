@@ -1,0 +1,54 @@
+int starOne = 10;
+int starTwo = 11;
+int starThree = 9;
+int randNumber;
+
+
+
+void setup()
+
+{
+	Serial.begin(9600);
+  	randomSeed(analogRead(A0));
+}
+
+
+
+void loop()
+
+{
+	randNumber = random(4);
+  
+  if (randNumber == 1)
+  {
+    Serial.println(randNumber);
+  	dimUpDown(starOne);
+  }
+  if (randNumber == 2)
+  {
+  	Serial.println(randNumber);
+  	dimUpDown(starTwo);
+  }
+	
+  if (randNumber == 3)
+  {
+  	Serial.println(randNumber);
+  	dimUpDown(starThree);
+  }
+   
+}
+
+
+void dimUpDown(int dimLed)
+
+{
+
+  int x = 1;
+  for (int i = 0; i > -1; i = i + x)
+  {
+    analogWrite(dimLed, i);
+    if (i == 255) x = -1;
+    delay(10);
+  }
+
+}
