@@ -1,4 +1,6 @@
-int PWMpin = 10;
+int starOne = 10;
+int starTwo = 11;
+int starThree = 9;
 
 void setup()
 {
@@ -6,7 +8,9 @@ void setup()
 
 void loop()
 {
-	dimUpDown(PWMpin);
+	dimUpDown(starOne);
+  	dimUpDown(starTwo);
+  	dimUpDown(starThree);
 }
 
 
